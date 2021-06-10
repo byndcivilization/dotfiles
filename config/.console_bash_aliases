@@ -1,0 +1,16 @@
+function ssh_up {
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_rsa  # or whatever your key is called
+}
+
+function console_up {
+    bin/rails s -b 0.0.0.0 -p 3000
+}
+
+function console_dbm {
+    bundle exec rails db:migrate
+}
+function console_install {
+    bundle install && npm install
+ }
+

@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Shell Variables
+# http://linux.die.net/man/1/bash
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Make nano the default editor
+export EDITOR="nano"
+
+# Ignore commands that start with spaces and duplicates
+export HISTCONTROL=ignoreboth
+
+
+# Don't add certain commands to the history file
+export HISTIGNORE="&:[bf]g:c:clear:history:exit:q:pwd:* --help"
+
+# Increase the maximum number of commands recorded in the
+# command history (default value is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+
+# Use custom `less` colors for man pages
+# https://www.gnu.org/software/termutils/manual/termutils-2.0/html_chapter/tput_1.html
+# export LESS_TERMCAP_md=$'\e[1;32m'   # begin bold mode
+export LESS_TERMCAP_md="${yellow}";
+export LESS_TERMCAP_me=$'\e[0m'      # end bold mode
+#export LESS_TERMCAP_us=$'\e[4;32m'   # begin underscore mode
+#export LESS_TERMCAP_ue=$'\e[0m'      # end underscore mode
+
+
+# Don't clear the screen after quitting a man page
+export MANPAGER="less -X"
+
+# Increase the maximum number of lines of history persisted
+# in the `Node` REPL history file (default value is 1000)
+# https://github.com/nodejs/node/blob/a85f4b5ce5791caf8caa9b31970313c6183a5499/doc/api/repl.markdown#persistent-history
+export NODE_REPL_HISTORY_SIZE=10000
+
+# Make new shells get the history lines from all previous
+# shells instead of the default "last window closed" history
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# Make Python use UTF-8 encoding for output to stdin/stdout/stderr
+export PYTHONIOENCODING="UTF-8"
+
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto";
+
+# Link Homebrew casks in `/Applications` rather than `~/Applications`
+export HOMEBREW_CASK_OPTS="--appdir=/Applications";

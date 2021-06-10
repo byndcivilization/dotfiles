@@ -6,8 +6,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
-# tap 'homebrew/php'
-tap "mongodb/brew"
+tap 'mongodb/brew'
 
 # Install ZSH
 brew 'zsh'
@@ -16,109 +15,131 @@ brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 
 # Install GNU core utilities (those that come with macOS are outdated)
-# brew 'coreutils'
+brew 'coreutils'
 
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-# brew 'findutils'
+brew 'findutils'
 
 # Install Bash 4
-# brew 'bash'
+brew 'bash'
 
 # Install more recent versions of some macOS tools
-# brew 'grep'
+brew 'grep'
 
 # Install Binaries
+brew 'zsh'
+brew 'jq'
 brew 'git'
-# https://stackoverflow.com/questions/59232089/how-to-install-gnu-grep-on-mac-os
-# Please read above link to decide how you'll use grep
-brew 'grep'
+brew 'tree'
+brew 'bfg'
+brew 'svn'
+brew 'the_silver_searcher'
+brew 'rename'
+brew 'nmap'
+brew 'moreutils'
+brew 'pigz'
+brew 'shellcheck'
+brew 'ucspi-tcp'
+brew 'wget'
+brew 'node'
+brew 'tmux'
 brew 'fzf'
 brew 'ripgrep'
 brew 'neofetch'
-# brew 'hub'
-# cask 'gh' Doesn't work?
-brew 'tree'
-brew 'rename'
-brew 'node'
+brew 'hub'
 brew 'trash'
 brew 'cmake'
 brew 'ssh-copy-id'
-brew 'tmux'
-brew 'wget'
-brew 'zsh'
-# brew 'mackup'
-# brew 'mas'
-# brew 'awscli'
-# brew 'wget'
+brew 'awscli'
+brew 'kind'
+brew 'k9s'
+brew 'gh'
+brew 'mas'
+brew 'tldr'
+brew 'thefuck'
+brew 'go'
+brew 'python'
+brew 'python3'
+brew 'packer'
+brew 'terraform'
+brew 'vault'
+brew 'pulumi'
+brew 'pyenv'
+brew 'shpotify'
+brew 'httpie'
+brew 'ngrep'
+brew 'gnupg'
+
 
 # databases
 brew 'mongodb/brew/mongodb-community'
 brew 'mysql'
+brew 'redis'
 brew 'sqlite'
 brew 'postgresql'
 
+
 # Apps
-cask 'alfred'
 cask 'iterm2'
-# alacritty is my new favorite terminal replacing iterm
 cask 'alacritty'
-cask 'sublime-text'
-# cask 'visual-studio-code'
-# I use vscodium because I like using neovim - if you are not, comment out this line and comment in the previous line
-# note: If you had visual-studio-code installed you need to uninstall it with `$ brew uninstall visual-studio-code`
-cask 'mongodb-compass'
-# cask 'vscodium'
-cask 'slack'
-cask 'mac2imgur'
-# cask 'Caskroom/cask/karabiner-elements'
-cask 'karabiner-elements'
-cask 'caffeine'
-cask 'dropbox'
-# cask 'spectacle'
-# rectangle replaces spectacle
+cask 'macvim'
 cask 'rectangle'
-cask 'docker'
+cask 'tunnelblick'
+
+# cask 'docker' # https://docs.docker.com/docker-for-mac/apple-silicon/
+cask 'pycharm'
+cask 'rubymine'
+
+cask 'r'
+cask 'rstudio'
+
 cask 'firefox'
+cask 'spotify'
+
+cask 'gephi'
+cask 'gyazo'
+cask 'handbrake'
+cask 'imagealpha'
+cask 'licecap'
+cask 'transmission'
+cask 'the-unarchiver'
+cask 'vagrant'
+cask 'virtualbox'
+cask 'virtualbox-extension-pack'
+cask 'vlc'
+cask 'google-drive'
+cask 'visual-studio-code'
+# cask 'slack' # brew version doesnt work
 cask 'google-chrome'
+cask 'sublime-text'
+cask 'mongodb-compass'
+cask 'mac2imgur'
+cask 'dropbox'
+cask 'caffeine'
+cask 'postman'
+
 cask 'jumpcut'
 cask 'insomnia'
-cask 'postman'
-cask 'mysqlworkbench'
-cask 'grammarly'
-cask 'neovim'
-# cask 'gpgtools'
-# cask 'now'
-# cask 'phpstorm'
-# cask 'quip'
-# cask 'sequel-pro'
-# cask 'transmit'
-# cask 'vagrant'
-# cask 'virtualbox'
-# cask 'virtualbox-extension-pack'
-# cask 'vlc'
 
-# Quicklook
-# cask 'qlcolorcode'
-# cask 'qlmarkdown'
-# cask 'quicklook-json'
-# cask 'quicklook-csv'
-# cask 'qlstephen'
 
 # Fonts
 cask 'font-source-code-pro-for-powerline'
-# cask 'font-source-code-pro'
-# cask 'font-source-sans-pro'
-# cask 'font-source-serif-pro'
+cask 'font-source-code-pro'
+cask 'font-source-sans-pro'
+cask 'font-source-serif-pro'
 cask 'font-fira-code'
-cask 'font-firacode-nerd-font-mono'
+
+
+# Quicklook
+cask 'qlcolorcode'
+cask 'qlmarkdown'
+cask 'quicklook-json'
+cask 'quicklook-csv'
+cask 'qlstephen'
+
 
 # Install Mac App Store apps
-# mas '1Password', id: 443987910
-# mas 'Byword', id: 420212497
-# mas 'Deckset', id: 847496013
-# mas 'Gapplin', id: 768053424
-# mas 'Giphy Capture', id: 668208984
-# mas 'Paw', id: 584653203
-# mas 'Sip', id: 507257563
-# mas 'Sketch', id: 402476602
-# mas 'Tweetbot', id: 557168941
+mas 'Amphetamine', id: 937984704
+mas 'Xcode', id: 497799835
+mas 'Slack', id: 803453959
+mas 'LastPass', id: 926036361
